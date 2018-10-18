@@ -1,0 +1,908 @@
+<!-- /**
+ * Home page
+ * 
+ * Author: Le Hoang Huy
+ * Last update: 17/10/2018
+ */ -->
+
+
+<!doctype html>
+<html>
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Food&Taste</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome v5.4.1 -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+    crossorigin="anonymous">
+  <!-- Mystyle core CSS -->
+  <link rel="stylesheet" href="style/css/megamenu.css">
+  <link rel="stylesheet" href="style/css/mystyle.css">
+
+  <script src="./libs/jquery/jquery-3.3.1.slim.min.js"></script>
+  <script src="./libs/popper/popper.min.js" ></script>
+  <script src="libs/bootstrap/js/bootstrap.min.js"> </script>
+  <script src="libs/jssorSlider/jssor.slider-27.5.0.min.js" type="text/javascript"></script>
+  <script src="style/js/mystyle.js"></script>
+
+</head>
+
+
+<body style="padding:0px; margin:0px;">
+
+  <!-- Button to back to top page -->
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-circle-up"></i></button>
+
+  <!-- Header -->
+  <div id="header" class="container-fluid row">
+    <!-- Logo -->
+    <div class="col-md-3 logo text-center" name="sologan">
+      <a href="#"><img src="images/logo.png" alt="logo" /></a>
+    </div>
+
+    <!-- Sologan -->
+    <div class="col-md-9 sologan text-center" name="sologan">
+      <p>
+        " Còn tình cảm nào chân thành hơn tình yêu dành cho thức ăn. "
+      </p>
+    </div>
+  </div>
+  <!-- end Header -->
+
+
+  <!-- Navigation -->
+  <div class="container-fluid bg-success mt-2">
+    <nav class="navbar navbar-expand-md position-static navbar-light ml-0 ml-lg-5">
+      <button class="navbar-toggler collapsed " type="button" data-toggle="collapse" data-target="#navbarsDefault"
+        aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar-collapse collapse d-md-none" id="navbarsDefault">
+        <ul class="navbar-nav nav-tabs">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Trang chủ</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+              aria-expanded="false">Hình Thức</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Nhà Hàng</a>
+              <a class="dropdown-item" href="#">Vỉa Hè</a>
+              <a class="dropdown-item" href="#">Giao Hàng</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Khuyến mãi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Về chúng tôi</a>
+          </li>
+          <li class="nav-item">
+            <a href="#"><button type="button" class="btn btn-success">Đăng bài viết</button></a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Langues and Login -->
+      <div class=" float-left mr-0  mr-lg-5">
+        <a href="#" class="mr-0 mr-lg-1 mt-2"><img src="images/vietnam.png" alt=""></a>
+        <a href="#" class="mr-0 mr-lg-2 mt-2"><img src="images/united-states-of-america.png" alt=""></a>
+        <a href="./login.html"><button type="button" class="btn btn-secondary mt-1">Đăng nhập</button></a>
+      </div>
+    </nav>
+  </div>
+  <!-- end Navigation -->
+
+  <!-- Search bar -->
+  <div class="container-fluid  d-flex  justify-content-center sticky-top bg-light" style="max-height: 50px;">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <!-- Brand of search bar -->
+      <a class="navbar-brand" href="#">
+        <button type="button" class="btn btn-info">TP.HCM</button>
+      </a>
+      <!-- Search box -->
+      <div class="nav-item mr-2">
+        <div class="input-group" style="min-width: 170px;width: 400px;">
+          <input type="text" class="form-control" placeholder="Search this blog">
+          <div class="input-group-append">
+            <button class="btn btn-secondary" type="button">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Toggle button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Content toggle -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item float-right mt-3 mr-1">
+            <!-- District -->
+            <div class="form-group float-right">
+              <select class="form-control d-inline" id="inputGroupSelect01" style="width:auto;">
+                <option selected>Quận, Huyện</option>
+                <option value="1">An Phú & Thảo Điền</option>
+                <option value="2">Bình Chánh</option>
+                <option value="3">Phú Mỹ Hưng</option>
+                <option value="4">Quận 1</option>
+                <option value="5">Quận 2</option>
+                <option value="6">Quận 3</option>
+                <option value="7">Quận 4</option>
+                <option value="8">Quận 5</option>
+                <option value="9">Quận 6</option>
+                <option value="10">Quận 7</option>
+                <option value="11">Quận 8</option>
+                <option value="12">Quận 9</option>
+                <option value="13">Quận 10</option>
+                <option value="14">Quận 11</option>
+                <option value="15">Quận 12</option>
+                <option value="16">Quận Bình Thạnh</option>
+                <option value="17">Quận Bình Tân</option>
+                <option value="18">Quận Gò Vấp</option>
+                <option value="19">Quận Phú Nhuận</option>
+                <option value="20">Quạn Thủ Đức</option>
+                <option value="21">Quận Tân Bình</option>
+                <option value="22">Quận Tân Phú</option>
+              </select>
+            </div>
+          </li>
+          <li class="nav-item float-right mt-3 mr-1">
+            <!-- Type search -->
+            <div class="form-group float-right">
+              <select class="form-control d-inline" id="inputGroupSelect02" style="width:auto;">
+                <option selected>Toàn bộ</option>
+                <option value="1">Thức Ăn</option>
+                <option value="2">Nước uống</option>
+                <option value="3">Thương hiệu</option>
+                <option value="4">Địa điểm</option>
+              </select>
+            </div>
+          </li>
+          <li class="nav-item float-right mt-3 mr-1">
+            <!-- filter -->
+            <div class="form-group float-right">
+              <select class="form-control d-inline" id="inputGroupSelect03" style="width:auto;">
+                <option selected>Thời gian đăng bài</option>
+                <option value="1">Gía thấp đến cao</option>
+                <option value="2">Giá cao đến thấp</option>
+                <option value="3">Khoảng cách gần</option>
+              </select>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <!-- end Search bar -->
+
+
+  <!-- *************** Main ****************-->
+
+  <!-- Slider -->
+  <!-- #region Jssor Slider Begin -->
+  <!-- Generator: Jssor Slider Maker -->
+  <div id="jssor_1" class="d-flex" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:380px;overflow:hidden;visibility:hidden;">
+    <!-- Loading Screen -->
+    <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+      <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="images/imgSlider/spin.svg" />
+    </div>
+    <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:380px;overflow:hidden;">
+      <div>
+        <a href="https://popeyes.vn/ga-sot-nhat-rac-toi-phi-uu-dai-35.html/" target="_blank"><img data-u="image" src="images/imgSlider/discount1.jpg"></a>
+      </div>
+      <div>
+        <a href="https://popeyes.vn/ga-sot-nhat-rac-toi-phi-uu-dai-35.html/" target="_blank"><img data-u="image" src="images/imgSlider/discount2.jpg"></a>
+      </div>
+      <div>
+        <a href="https://popeyes.vn/ga-sot-nhat-rac-toi-phi-uu-dai-35.html/" target="_blank"><img data-u="image" src="images/imgSlider/discount3.jpg"></a>
+      </div>
+      <div>
+        <a href="https://popeyes.vn/ga-sot-nhat-rac-toi-phi-uu-dai-35.html/" target="_blank"><img data-u="image" src="images/imgSlider/discount1.jpg"></a>
+      </div>
+      <div>
+        <a href="https://popeyes.vn/ga-sot-nhat-rac-toi-phi-uu-dai-35.html/" target="_blank"><img data-u="image" src="images/imgSlider/discount2.jpg"></a>
+      </div>
+      <div>
+        <a href="https://popeyes.vn/ga-sot-nhat-rac-toi-phi-uu-dai-35.html/" target="_blank"><img data-u="image" src="images/imgSlider/discount3.jpg"></a>
+      </div>
+    </div>
+    <!-- Bullet Navigator -->
+    <div data-u="navigator" class="jssorb051" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1"
+      data-scale="0.5" data-scale-bottom="0.75">
+      <div data-u="prototype" class="i" style="width:16px;height:16px;">
+        <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+          <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+        </svg>
+      </div>
+    </div>
+    <!-- Arrow Navigator -->
+    <div data-u="arrowleft" class="jssora051" style="width:65px;height:65px;top:0px;left:35px;" data-autocenter="2"
+      data-scale="0.75" data-scale-left="0.75">
+      <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+        <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+      </svg>
+    </div>
+    <div data-u="arrowright" class="jssora051" style="width:65px;height:65px;top:0px;right:35px;" data-autocenter="2"
+      data-scale="0.75" data-scale-right="0.75">
+      <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+        <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+      </svg>
+    </div>
+  </div>
+  <script type="text/javascript">jssor_1_slider_init();</script>
+  <!-- endregion Jssor Slider End -->
+
+  <!-- *** Side bar *** -->
+  <div class="container-fluid mt-2">
+    <div class="row">
+      <div class="col-1 col-md-2">
+        <!-- open sidebar sutton  -->
+        <div class="openSideBar d-md-none">
+          <div style="cursor:pointer;" onclick="openNav()">
+            <img src="images/right-double-chevron.svg" alt="x" width="100%" height="100%">
+          </div>
+        </div>
+        <div id="mySidenav" class="sidenav">
+          <!-- close sidebar button -->
+          <div class="closeSideBar d-sm-none">
+            <a href="javascript:void(0)" class="closebtn d-md-none" onclick="closeNav()"><i class="far fa-window-close"></i></a>
+          </div>
+          <ul class=" nav flex-column menu" id="menu" role="tablist" aria-orientation="vertical">
+
+            <li style="background-color: green;" class="menu-li">
+              <!-- Tab all -->
+              <a id="all-tab" href="#all" data-toggle="tab" role="tab" aria-controls="all" aria-selected="true">Tất cả</a>
+            </li>
+
+            <!-- Tab foods -->
+            <li class="menu-li">
+
+              <a id="food-tab" href="#food" data-toggle="tab" role="tab" aria-controls="food" aria-selected="false">Đồ
+                ăn <i class="fas fa-angle-right"></i></a>
+
+              <div class="megadrop">
+
+                <div class="column">
+                  <h3>Loại hình</h3>
+                  <ul>
+                    <li><a class="nav-link mega-a" id="1" href="#1" data-toggle="tab" role="tab" aria-controls="v-pills-profile"
+                        aria-selected="false">Cơm</a>
+                    </li>
+                    <li><a class="nav-link mega-a " id="2" href="#2" role="tab" aria-controls="v-pills-profile"
+                        aria-selected="false">Hủ
+                        tiếu</a>
+                    </li>
+                    <li><a class="nav-link mega-a" id="3" href="#3" role="tab" aria-controls="v-pills-profile"
+                        aria-selected="false">Bánh
+                        mì</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <h3>Ẩm thực</h3>
+                  <ul>
+                    <li><a href="#">Miền Bắc</a>
+                    </li>
+                    <li><a href="#">Miền Nam</a>
+                    </li>
+                    <li><a href="#">Miền Trung</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <h3>Ẩm thực</h3>
+                  <ul>
+                    <li><a href="#">Miền Bắc</a>
+                    </li>
+                    <li><a href="#">Miền Nam</a>
+                    </li>
+                    <li><a href="#">Miền Trung</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+
+            </li>
+
+            <!-- Tab drinks -->
+            <li class="menu-li">
+
+              <a id="drink-tab" href="#drink" data-toggle="tab" role="tab" aria-controls="drink" aria-selected="false">Đồ
+                uống <i class="fas fa-angle-right"></i> </a>
+
+              <div class="megadrop">
+                <div class="column">
+                  <ul>
+                    <li><a class="nav-link" id="1" href="#1" role="tab" aria-controls="v-pills-profile" aria-selected="false">Cà
+                        phê</a>
+                    </li>
+                    <li><a class="nav-link " id="2" href="#2" role="tab" aria-controls="v-pills-profile" aria-selected="false">Nươc
+                        ngọt</a>
+                    </li>
+                    <li><a class="nav-link " id="3" href="#3" role="tab" aria-controls="v-pills-profile" aria-selected="false">Sinh
+                        tố</a>
+                    </li>
+                    <li><a href="#">Nươc ép trái cây</a>
+                    </li>
+                    <li><a href="#">Nước dừa</a>
+                    </li>
+                    <li><a href="#">Bia</a>
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+            </li>
+
+            <!-- Tab comment -->
+            <li class="menu-li">
+
+              <a id="comment-tab" href="#comment" data-toggle="tab" role="tab" aria-controls="comment" aria-selected="false">Bình luận</a>
+            </li>
+            <!-- Tab discount -->
+            <li class="menu-li">
+
+              <a id="discount-tab" href="#discount" data-toggle="tab" role="tab" aria-controls="discount" aria-selected="false">Khuyến
+                mãi</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- *********** Tab content ************ -->
+      <div class="col-11 col-md-10">
+        <div class="container-fluid">
+          <div class="row bg-lightgrey">
+            <div class="col-6 col-md-9">
+              <!-- This div will be appear when screen lager than 768px -->
+              <div class="before-nav">
+                <nav class="nav">
+                  <a class="nav-link" style="background-color: green; color: white;" href="#">Mới nhất</a>
+                  <a class="nav-link " href="#">Gần tôi</a>
+                  <a class="nav-link" href="#">Đã lưu</a>
+                  <a class="nav-link" href="#">Ưu đãi</a>
+                </nav>
+              </div>
+              <!-- This div will be appear when screen smaller than 768px -->
+              <div class="after-nav d-md-none">
+                <div class="form-group d-inline">
+                  <select class="form-control d-inline bg-lightgrey" style="width:auto;">
+                    <option selected>Mới nhất</option>
+                    <option value="1">Gần tôi</option>
+                    <option value="2">Đã lưu</option>
+                    <option value="3">Ưu đãi</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <!-- District -->
+              <div class="form-group d-inline ">
+                <select class="form-control d-inline float-right h-100 bg-lightgrey" style="width: auto; min-width: 100px;">
+                  <option selected>Quận, Huyện</option>
+                  <option value="1">An Phú & Thảo Điền</option>
+                  <option value="2">Bình Chánh</option>
+                  <option value="3">Phú Mỹ Hưng</option>
+                  <option value="4">Quận 1</option>
+                  <option value="5">Quận 2</option>
+                  <option value="6">Quận 3</option>
+                  <option value="7">Quận 4</option>
+                  <option value="8">Quận 5</option>
+                  <option value="9">Quận 6</option>
+                  <option value="10">Quận 7</option>
+                  <option value="11">Quận 8</option>
+                  <option value="12">Quận 9</option>
+                  <option value="13">Quận 10</option>
+                  <option value="14">Quận 11</option>
+                  <option value="15">Quận 12</option>
+                  <option value="16">Quận Bình Thạnh</option>
+                  <option value="17">Quận Bình Tân</option>
+                  <option value="18">Quận Gò Vấp</option>
+                  <option value="19">Quận Phú Nhuận</option>
+                  <option value="20">Quạn Thủ Đức</option>
+                  <option value="21">Quận Tân Bình</option>
+                  <option value="22">Quận Tân Phú</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="tab-content" id="tabContent">
+
+          <!-- Tab all -->
+          <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+            <div class="album pt-3 bg-light">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-4 col-lg-3">
+                    <div class="card mb-4 box-shadow">
+                      <a href="#">
+                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                          alt="Thumbnail [100%x210]" style="height: 210px; width: 100%; display: block;" src="images/products/comnieu.jpg"
+                          data-holder-rendered="true">
+                      </a>
+                      <div class="card-body">
+                        <h5 class="card-title"> <a href="./food-place.html" target="_blank"> Cơm Niêu Sài Gòn </a> </h5>
+                        <p class="font-italic" style="font-size: 12px; margin-bottom: 0.5rem;"><i class="fas fa-map-marker-alt"></i>
+                          Nguyễn Văn Linh, Xã Bình Hưng, Bình Chánh.</p>
+                        <p class="font-italic" style="font-size: 12px;"><i class="fas fa-thumbs-up"></i> Điểm đánh giá:
+                          8.1
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <small class="text-muted">Cập nhật lần cuối: 9 phút</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-lg-3">
+                    <div class="card mb-4 box-shadow">
+                      <a href="#">
+                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                          alt="Thumbnail [100%x210]" style="height: 210px; width: 100%; display: block;" src="images/products/comnieu.jpg"
+                          data-holder-rendered="true">
+                      </a>
+                      <div class="card-body">
+                        <h5 class="card-title"> <a href="#"> Cơm Niêu Sài Gòn </a> </h5>
+                        <p class="font-italic" style="font-size: 12px; margin-bottom: 0.5rem;"><i class="fas fa-map-marker-alt"></i>
+                          Nguyễn Văn Linh, Xã Bình Hưng, Bình Chánh.</p>
+                        <p class="font-italic" style="font-size: 12px;"><i class="fas fa-thumbs-up"></i> Điểm đánh giá:
+                          8.1
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <small class="text-muted">Cập nhật lần cuối: 9 phút</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-lg-3">
+                    <div class="card mb-4 box-shadow">
+                      <a href="#">
+                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                          alt="Thumbnail [100%x210]" style="height: 210px; width: 100%; display: block;" src="images/products/comnieu.jpg"
+                          data-holder-rendered="true">
+                      </a>
+                      <div class="card-body">
+                        <h5 class="card-title"> <a href="#"> Cơm Niêu Sài Gòn </a> </h5>
+                        <p class="font-italic" style="font-size: 12px; margin-bottom: 0.5rem;"><i class="fas fa-map-marker-alt"></i>
+                          Nguyễn Văn Linh, Xã Bình Hưng, Bình Chánh.</p>
+                        <p class="font-italic" style="font-size: 12px;"><i class="fas fa-thumbs-up"></i> Điểm đánh giá:
+                          8.1
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <small class="text-muted">Cập nhật lần cuối: 9 phút</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-lg-3">
+                    <div class="card mb-4 box-shadow">
+                      <a href="#">
+                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                          alt="Thumbnail [100%x210]" style="height: 210px; width: 100%; display: block;" src="images/products/comnieu.jpg"
+                          data-holder-rendered="true">
+                      </a>
+                      <div class="card-body">
+                        <h5 class="card-title"> <a href="#"> Cơm Niêu Sài Gòn </a> </h5>
+                        <p class="font-italic" style="font-size: 12px; margin-bottom: 0.5rem;"><i class="fas fa-map-marker-alt"></i>
+                          Nguyễn Văn Linh, Xã Bình Hưng, Bình Chánh.</p>
+                        <p class="font-italic" style="font-size: 12px;"><i class="fas fa-thumbs-up"></i> Điểm đánh giá:
+                          8.1
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <small class="text-muted">Cập nhật lần cuối: 9 phút</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-lg-3">
+                    <div class="card mb-4 box-shadow">
+                      <a href="#">
+                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                          alt="Thumbnail [100%x210]" style="height: 210px; width: 100%; display: block;" src="images/products/comnieu.jpg"
+                          data-holder-rendered="true">
+                      </a>
+                      <div class="card-body">
+                        <h5 class="card-title"> <a href="#"> Cơm Niêu Sài Gòn </a> </h5>
+                        <p class="font-italic" style="font-size: 12px; margin-bottom: 0.5rem;"><i class="fas fa-map-marker-alt"></i>
+                          Nguyễn Văn Linh, Xã Bình Hưng, Bình Chánh.</p>
+                        <p class="font-italic" style="font-size: 12px;"><i class="fas fa-thumbs-up"></i> Điểm đánh giá:
+                          8.1
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <small class="text-muted">Cập nhật lần cuối: 9 phút</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-lg-3">
+                    <div class="card mb-4 box-shadow">
+                      <a href="#">
+                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                          alt="Thumbnail [100%x210]" style="height: 210px; width: 100%; display: block;" src="images/products/comnieu.jpg"
+                          data-holder-rendered="true">
+                      </a>
+                      <div class="card-body">
+                        <h5 class="card-title"> <a href="#"> Cơm Niêu Sài Gòn </a> </h5>
+                        <p class="font-italic" style="font-size: 12px; margin-bottom: 0.5rem;"><i class="fas fa-map-marker-alt"></i>
+                          Nguyễn Văn Linh, Xã Bình Hưng, Bình Chánh.</p>
+                        <p class="font-italic" style="font-size: 12px;"><i class="fas fa-thumbs-up"></i> Điểm đánh giá:
+                          8.1
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <small class="text-muted">Cập nhật lần cuối: 9 phút</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-lg-3">
+                    <div class="card mb-4 box-shadow">
+                      <a href="#">
+                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                          alt="Thumbnail [100%x210]" style="height: 210px; width: 100%; display: block;" src="images/products/comnieu.jpg"
+                          data-holder-rendered="true">
+                      </a>
+                      <div class="card-body">
+                        <h5 class="card-title"> <a href="#"> Cơm Niêu Sài Gòn </a> </h5>
+                        <p class="font-italic" style="font-size: 12px; margin-bottom: 0.5rem;"><i class="fas fa-map-marker-alt"></i>
+                          Nguyễn Văn Linh, Xã Bình Hưng, Bình Chánh.</p>
+                        <p class="font-italic" style="font-size: 12px;"><i class="fas fa-thumbs-up"></i> Điểm đánh giá:
+                          8.1
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <small class="text-muted">Cập nhật lần cuối: 9 phút</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-lg-3">
+                    <div class="card mb-4 box-shadow">
+                      <a href="#">
+                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                          alt="Thumbnail [100%x210]" style="height: 210px; width: 100%; display: block;" src="images/products/comnieu.jpg"
+                          data-holder-rendered="true">
+                      </a>
+                      <div class="card-body">
+                        <h5 class="card-title"> <a href="#"> Cơm Niêu Sài Gòn </a> </h5>
+                        <p class="font-italic" style="font-size: 12px; margin-bottom: 0.5rem;"><i class="fas fa-map-marker-alt"></i>
+                          Nguyễn Văn Linh, Xã Bình Hưng, Bình Chánh.</p>
+                        <p class="font-italic" style="font-size: 12px;"><i class="fas fa-thumbs-up"></i> Điểm đánh giá:
+                          8.1
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <small class="text-muted">Cập nhật lần cuối: 9 phút</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <nav aria-label="Page navigation">
+              <ul class="pagination justify-content-end mr-3">
+                <li class="page-item disabled">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <i class="fas fa-angle-double-left"></i>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <i class="fas fa-angle-double-right"></i>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Tab food -->
+          <div class="tab-pane fade" id="food" role="tabpanel" aria-labelledby="food-tab">
+            <p>This is tab food</p>
+          </div>
+
+          <!-- Tab drinks -->
+          <div class="tab-pane fade" id="drink" role="tabpanel" aria-labelledby="drink-tab">
+            <p>This is tab drinks</p>
+          </div>
+          <!-- Tab comment -->
+          <div class="tab-pane fade" id="comment" role="tabpanel" aria-labelledby="comment-tab">
+            <div class="album pt-2 bg-light">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                        alt="Thumbnail [100%x210]" style="height: 210px; width: 100%; display: block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22208%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20208%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_166750af98c%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A11pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_166750af98c%22%3E%3Crect%20width%3D%22208%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2265.9921875%22%20y%3D%22116.7%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                        data-holder-rendered="true">
+                      <div class="card-body">
+                        <p class="card-text">Comment tab here</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                          </div>
+                          <small class="text-muted">9 mins</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                        alt="Thumbnail [100%x210]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22208%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20208%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_166750af98d%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A11pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_166750af98d%22%3E%3Crect%20width%3D%22208%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2265.9921875%22%20y%3D%22116.7%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                        data-holder-rendered="true" style="height: 210px; width: 100%; display: block;">
+                      <div class="card-body">
+                        <p class="card-text">All tab here</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                          </div>
+                          <small class="text-muted">9 mins</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                        alt="Thumbnail [100%x210]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22208%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20208%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_166750af98f%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A11pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_166750af98f%22%3E%3Crect%20width%3D%22208%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2265.9921875%22%20y%3D%22116.7%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                        data-holder-rendered="true" style="height: 210px; width: 100%; display: block;">
+                      <div class="card-body">
+                        <p class="card-text">All tab here</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                          </div>
+                          <small class="text-muted">9 mins</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                        alt="Thumbnail [100%x210]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22208%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20208%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_166750af992%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A11pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_166750af992%22%3E%3Crect%20width%3D%22208%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2265.9921875%22%20y%3D%22116.7%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                        data-holder-rendered="true" style="height: 210px; width: 100%; display: block;">
+                      <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                          additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                          </div>
+                          <small class="text-muted">9 mins</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                        alt="Thumbnail [100%x210]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22208%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20208%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_166750af994%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A11pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_166750af994%22%3E%3Crect%20width%3D%22208%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2265.9921875%22%20y%3D%22116.7%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                        data-holder-rendered="true" style="height: 210px; width: 100%; display: block;">
+                      <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                          additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                          </div>
+                          <small class="text-muted">9 mins</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                        alt="Thumbnail [100%x210]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22208%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20208%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_166750af997%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A11pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_166750af997%22%3E%3Crect%20width%3D%22208%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2265.9921875%22%20y%3D%22116.7%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                        data-holder-rendered="true" style="height: 210px; width: 100%; display: block;">
+                      <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                          additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                          </div>
+                          <small class="text-muted">9 mins</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <nav aria-label="Page navigation">
+              <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <i class="fas fa-angle-double-left"></i>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <i class="fas fa-angle-double-right"></i>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- Tab discount -->
+          <div class="tab-pane fade" id="discount" role="tabpanel" aria-labelledby="discount-tab">
+            <p>This is tab discount</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- End side bar -->
+
+
+
+
+  <!-- ************ end Main **************-->
+
+
+  <!-- Footer -->
+  <footer class="page-footer font-small blue-grey lighten-5 mt-5  ">
+
+    <div style="background-color: #33b889;">
+      <div class="container">
+
+        <!-- Grid row-->
+        <div class="row py-3 d-flex align-items-center">
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+            <h6 class="mb-0">Get connected with us on social networks!</h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+            <!-- Facebook -->
+            <a class="fb-ic">
+              <i class="fab fa-facebook mr-4"></i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic">
+              <i class="fab fa-twitter mr-4"></i>
+            </a>
+            <!-- Google +-->
+            <a class="gplus-ic">
+              <i class="fab fa-google-plus-g mr-4"></i>
+            </a>
+            <!--Linkedin -->
+            <a class="li-ic">
+              <i class="fab fa-linkedin mr-4"></i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic">
+              <i class="fab fa-instagram"></i>
+            </a>
+
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row-->
+
+      </div>
+    </div>
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left mt-3">
+
+      <!-- Grid row -->
+      <div class="row dark-grey-text">
+
+        <!-- Grid column -->
+        <div class="col-4">
+
+          <!-- Content -->
+          <h6 class="text-uppercase font-weight-bold">Mục tiêu</h6>
+          <hr class="teal accent-3 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p class="text-justify">Food & Taste được chúng tôi tạo ra nhằm cung cấp một địa chỉ online giúp mọi người
+            tìm kiếm các
+            địa điểm ăn uống ở TPHCM một cách nhanh chống.</p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-4 mx-auto">
+
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Lĩnh vực tìm kiếm</h6>
+          <hr class="teal accent-3 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <a class="dark-grey-text" href="#!">Đồ ăn</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="#!">Đồ uống</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="#!">Bình luận</a>
+          </p>
+          <p>
+            <a class="dark-grey-text" href="#!">Khuyến mãi</a>
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-4 mx-auto mb-md-0 ">
+
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Contact</h6>
+          <hr class="teal accent-3 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <i class="fa fa-home mr-3"></i> VietNam, HCM City</p>
+          <p>
+            <i class="fa fa-envelope mr-3"></i> info@gmail.com</p>
+          <p>
+            <i class="fa fa-phone mr-3"></i> + 01 234 567 88</p>
+          <p>
+            <i class="fa fa-print mr-3"></i> + 01 234 567 89</p>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center text-black-50">© 2018 Copyright:
+      <a class="dark-grey-text" href="#"> Food-Taste.com</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+
+  <!-- end Footer -->
+
+
+</body>
+
+</html>

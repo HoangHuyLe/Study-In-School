@@ -1,0 +1,675 @@
+<!-- /**
+ * Product detail page
+ * 
+ * Author: Le Hoang Huy
+ * Last update: 17/10/2018
+ */ -->
+
+<!doctype html>
+<html>
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Food-Place</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome v5.4.1 -->
+    <link rel="stylesheet" href="./libs/fontawesome/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+    <!-- Mystyle core CSS -->
+    <link rel="stylesheet" href="style/css/footplace.css">
+    <link rel="stylesheet" href="style/css/mystyle.css">
+
+    <script src="./libs/jquery/jquery-3.3.1.slim.min.js"></script>
+    <script src="./libs/popper/popper.min.js"></script>
+    <script src="libs/bootstrap/js/bootstrap.min.js"> </script>
+    <script src="libs/jssorSlider/jssor.slider-27.5.0.min.js" type="text/javascript"></script>
+    <script src="style/js/mystyle.js"></script>
+    <script src="style/js/foodplace.js"></script>
+
+</head>
+
+
+<body style="padding:0px; margin:0px;">
+
+    <!-- Button to back to top page -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-circle-up"></i></button>
+
+    <!-- Header -->
+    <div id="header" class="container-fluid row">
+        <!-- Logo -->
+        <div class="col-md-3 logo text-center" name="sologan">
+            <a href="#"><img src="images/logo.png" alt="logo" /></a>
+        </div>
+
+        <!-- Sologan -->
+        <div class="col-md-9 sologan text-center" name="sologan">
+            <p>
+                " Còn tình cảm nào chân thành hơn tình yêu dành cho thức ăn. "
+            </p>
+        </div>
+    </div>
+    <!-- end Header -->
+
+
+    <!-- Navigation -->
+    <div class="container-fluid bg-success mt-2">
+        <nav class="navbar navbar-expand-md position-static navbar-light ml-0 ml-lg-5">
+            <button class="navbar-toggler collapsed " type="button" data-toggle="collapse" data-target="#navbarsDefault"
+                aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse d-md-none" id="navbarsDefault">
+                <ul class="navbar-nav nav-tabs">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Trang chủ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                            aria-expanded="false">Hình Thức</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Nhà Hàng</a>
+                            <a class="dropdown-item" href="#">Vỉa Hè</a>
+                            <a class="dropdown-item" href="#">Giao Hàng</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Khuyến mãi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Về chúng tôi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><button type="button" class="btn btn-success">Đăng bài viết</button></a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Langues and Login -->
+            <div class=" float-left mr-0  mr-lg-5">
+                <a href="#" class="mr-0 mr-lg-1 mt-2"><img src="images/vietnam.png" alt=""></a>
+                <a href="#" class="mr-0 mr-lg-2 mt-2"><img src="images/united-states-of-america.png" alt=""></a>
+                <a href="./login.html"><button type="button" class="btn btn-secondary mt-1">Đăng nhập</button></a>
+            </div>
+        </nav>
+    </div>
+    <!-- end Navigation -->
+
+    <!-- Search bar -->
+    <div class="container-fluid  d-flex  justify-content-center sticky-top bg-light" style="max-height: 50px;">
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <!-- Brand of search bar -->
+            <a class="navbar-brand" href="#">
+                <button type="button" class="btn btn-info">TP.HCM</button>
+            </a>
+            <!-- Search box -->
+            <div class="nav-item mr-2">
+                <div class="input-group" style="min-width: 170px;width: 400px;">
+                    <input type="text" class="form-control" placeholder="Search this blog">
+                    <div class="input-group-append">
+                        <button class="btn btn-secondary" type="button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Toggle button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Content toggle -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item float-right mt-3 mr-1">
+                        <!-- District -->
+                        <div class="form-group float-right">
+                            <select class="form-control d-inline" id="inputGroupSelect01" style="width:auto;">
+                                <option selected>Quận, Huyện</option>
+                                <option value="1">An Phú & Thảo Điền</option>
+                                <option value="2">Bình Chánh</option>
+                                <option value="3">Phú Mỹ Hưng</option>
+                                <option value="4">Quận 1</option>
+                                <option value="5">Quận 2</option>
+                                <option value="6">Quận 3</option>
+                                <option value="7">Quận 4</option>
+                                <option value="8">Quận 5</option>
+                                <option value="9">Quận 6</option>
+                                <option value="10">Quận 7</option>
+                                <option value="11">Quận 8</option>
+                                <option value="12">Quận 9</option>
+                                <option value="13">Quận 10</option>
+                                <option value="14">Quận 11</option>
+                                <option value="15">Quận 12</option>
+                                <option value="16">Quận Bình Thạnh</option>
+                                <option value="17">Quận Bình Tân</option>
+                                <option value="18">Quận Gò Vấp</option>
+                                <option value="19">Quận Phú Nhuận</option>
+                                <option value="20">Quạn Thủ Đức</option>
+                                <option value="21">Quận Tân Bình</option>
+                                <option value="22">Quận Tân Phú</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li class="nav-item float-right mt-3 mr-1">
+                        <!-- Type search -->
+                        <div class="form-group float-right">
+                            <select class="form-control d-inline" id="inputGroupSelect02" style="width:auto;">
+                                <option selected>Toàn bộ</option>
+                                <option value="1">Thức Ăn</option>
+                                <option value="2">Nước uống</option>
+                                <option value="3">Thương hiệu</option>
+                                <option value="4">Địa điểm</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li class="nav-item float-right mt-3 mr-1">
+                        <!-- filter -->
+                        <div class="form-group float-right">
+                            <select class="form-control d-inline" id="inputGroupSelect03" style="width:auto;">
+                                <option selected>Thời gian đăng bài</option>
+                                <option value="1">Gía thấp đến cao</option>
+                                <option value="2">Giá cao đến thấp</option>
+                                <option value="3">Khoảng cách gần</option>
+                            </select>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- end Search bar -->
+
+
+
+
+    <div class="container mt-2">
+        <!-- information place -->
+        <div class="container  bg-light">
+            <div class="row">
+                <div class="col-5 p-0 res-image">
+                    <img src="images/products/comnieu.jpg" alt="x" width="100%" height="100%">
+                </div>
+                <div class="col-7">
+                    <h2 class="font-weight-bold">Cơm Niêu Sài Gòn</h2>
+                    <footer class="blockquote-footer"><cite title="Source Title">Tag: Quán ăn - Món Nhật - Giao hàng
+                            tận nơi</cite></footer>
+
+                    <div class="row mt-2 border-top border-bottom p-1">
+                        <div class="col-3 col-md-4">
+                            <div class="microsite-point">
+                                <p class="mb-2 point" style="font-size:25px;">4.0</p>
+                                <div class="point-label">Trung bình</div>
+                            </div>
+                        </div>
+                        <div class="col-2 col-md-2">
+                            <div class="microsite-point">
+                                <p class="mb-2 point">5.0</p>
+                                <div class="point-label">Chất lượng</div>
+                            </div>
+                        </div>
+                        <div class="col-2 col-md-2">
+                            <div class="microsite-point">
+                                <p class="mb-2 point">4.0</p>
+                                <div class="point-label">Giá cả</div>
+                            </div>
+                        </div>
+                        <div class="col-2 col-md-2">
+                            <div class="microsite-point">
+                                <p class="mb-2 point">4.0</p>
+                                <div class="point-label">Phục vụ</div>
+                            </div>
+                        </div>
+                        <div class="col-3 col-md-2">
+                            <div class="microsite-point">
+                                <p class="mb-2 point">3.0</p>
+                                <div class="point-label">Không gian</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-1 mt-2">
+                        <i class="fas fa-map-marker-alt mr-2"></i>
+                        Lô 11B KDC Happy City, Nguyễn Văn Linh, Xã Bình Hưng, Bình Chánh, TP. HCM
+                    </div>
+                    <div class="p-1">
+                        <i class="far fa-clock mr-1"></i> 1:30 - 20:00
+                    </div>
+                    <div class="p-1">
+                        <i class="fas fa-dollar-sign mr-2"></i> 18.000đ - 231.000đ
+                    </div>
+                    <div class="p-1">
+                        <i class="fas fa-phone"></i> (+84)123456789
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- End information place -->
+
+        <!-- *** Content *** -->
+        <div class="container mt-2 bg-light">
+
+            <!-- *** Top navigation *** -->
+            <div class="row">
+                <div class="topnavContent" id="topnavContent">
+                    <ul class="nav" role="tablist">
+                        <li class="nav-item ">
+                            <a class="nav-link active init-active" id="comment-tab" data-toggle="tab" href="#comment"
+                                role="tab" aria-controls="comment" aria-selected="true">Bình luận <span class="nav-badge">(10)</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" id="image-tab" data-toggle="tab" href="#image" role="tab" aria-controls="image"
+                                aria-selected="false"> Ảnh <span class="nav-badge">(20)</span> </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" id="video-tab" data-toggle="tab" href="#video" role="tab" aria-controls="video"
+                                aria-selected="false">Video <span class="nav-badge">(1)</span> </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" id="map-tab" data-toggle="tab" href="#map" role="tab" aria-controls="map"
+                                aria-selected="false">Bản đồ</a>
+                        </li>
+
+                    </ul>
+                    <a href="javascript:void(0);" style="font-size:30px;" class="icon" onclick="collapeNav()">&#9776;</a>
+                </div>
+            </div>
+
+            <!-- *** Tab panel content *** -->
+            <div class="row">
+                <div class="tab-content" id="myTabContent">
+                    <!-- Tab comment -->
+                    <div class="tab-pane fade show active" id="comment" role="tabpanel" aria-labelledby="comment-tab">
+                        <div class="row mt-3">
+                            <!-- Comment -->
+                            <div class="col-9">
+                                <!-- comment 1 -->
+                                <div class="media bg-white border p-1">
+                                    <div class="mr-3">
+                                        <img src="./images/user-png-image.png" alt="Generic" width="64px" height="64px">
+                                        <p class="text-center">name</p>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <h5 class="mt-0 mb-0">Đồ ăn không tươi, giá cao
+                                            <a class="smallcmt" href="#">
+                                                <i class="far fa-comment"></i> Thảo luận
+                                            </a>
+                                        </h5>
+                                        <h6 class="font-italic"><small>3/8/2018 19:59</small></h6>
+                                        <p class="text-justify">
+                                            Gọi lươn xào xả ớt với cá hú kho tộ, cá ko tươi, lươn hơi nặng mùi, giá cao
+                                            lại còn thêm 5% phí phục vụ trong khi nhân viên ko được niềm nở.
+                                        </p>
+
+
+                                        <div class="media mt-3">
+                                            <div class="mr-3">
+                                                <img src="./images/user-png-image.png" alt="Generic" width="64px"
+                                                    height="64px">
+                                                <p class="text-center">name</p>
+                                            </div>
+                                            <div class="media-body">
+                                                <h5 class="mt-0 mb-0">Đồ ăn không tươi, giá cao
+                                                    <a class="smallcmt" href="#">
+                                                        <i class="far fa-comment"></i> Thảo luận
+                                                    </a>
+                                                </h5>
+                                                <h6 class="font-italic"><small>3/8/2018 19:59</small></h6>
+                                                <p class="text-justify">
+                                                    Gọi lươn xào xả ớt với cá hú kho tộ, cá ko tươi, lươn hơi nặng mùi,
+                                                    giá cao lại còn thêm 5% phí phục vụ trong khi nhân viên ko được
+                                                    niềm nở.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- comment 2 -->
+                                <div class="media bg-white border p-1 mt-3">
+                                    <div class="mr-3">
+                                        <img src="./images/user-png-image.png" alt="Generic" width="64px" height="64px">
+                                        <p class="text-center">name</p>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <h5 class="mt-0 mb-0">Đồ ăn không tươi, giá cao
+                                            <a class="smallcmt" href="#">
+                                                <i class="far fa-comment"></i> Thảo luận
+                                            </a>
+                                        </h5>
+                                        <h6 class="font-italic"><small>3/8/2018 19:59</small></h6>
+                                        <p class="text-justify">
+                                            Gọi lươn xào xả ớt với cá hú kho tộ, cá ko tươi, lươn hơi nặng mùi, giá cao
+                                            lại còn thêm 5% phí phục vụ trong khi nhân viên ko được niềm nở.
+                                        </p>
+
+
+                                        <div class="media mt-3">
+                                            <div class="mr-3">
+                                                <img src="./images/user-png-image.png" alt="Generic" width="64px"
+                                                    height="64px">
+                                                <p class="text-center">name</p>
+                                            </div>
+                                            <div class="media-body">
+                                                <h5 class="mt-0 mb-0">Đồ ăn không tươi, giá cao
+                                                    <a class="smallcmt" href="#">
+                                                        <i class="far fa-comment"></i> Thảo luận
+                                                    </a>
+
+                                                </h5>
+                                                <h6 class="font-italic"><small>3/8/2018 19:59</small></h6>
+                                                <p class="text-justify">
+                                                    Gọi lươn xào xả ớt với cá hú kho tộ, cá ko tươi, lươn hơi nặng mùi,
+                                                    giá cao lại còn thêm 5% phí phục vụ trong khi nhân viên ko được
+                                                    niềm nở.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="media mt-3">
+                                            <div class="mr-3">
+                                                <img src="./images/user-png-image.png" alt="Generic" width="64px"
+                                                    height="64px">
+                                                <p class="text-center">name</p>
+                                            </div>
+                                            <div class="media-body">
+                                                <h5 class="mt-0 mb-0">Đồ ăn không tươi, giá cao
+                                                    <a class="smallcmt" href="#">
+                                                        <i class="far fa-comment"></i> Thảo luận
+                                                    </a>
+                                                </h5>
+                                                <h6 class="font-italic"><small>3/8/2018 19:59</small></h6>
+                                                <p class="text-justify">
+                                                    Gọi lươn xào xả ớt với cá hú kho tộ, cá ko tươi, lươn hơi nặng mùi,
+                                                    giá cao lại còn thêm 5% phí phục vụ trong khi nhân viên ko được
+                                                    niềm nở.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- comment 3 -->
+                                <div class="media bg-white border p-1 mt-3 ">
+                                    <div class="mr-3">
+                                        <img src="./images/user-png-image.png" alt="Generic" width="64px" height="64px">
+                                        <p class="text-center">name</p>
+                                    </div>
+                                    <div class="media-body">
+                                        <h5 class="mt-0 mb-0">Đồ ăn không tươi, giá cao
+                                            <a class="smallcmt" href="#">
+                                                <i class="far fa-comment"></i> Thảo luận
+                                            </a>
+                                        </h5>
+                                        <h6 class="font-italic"><small>3/8/2018 19:59</small></h6>
+                                        <p class="text-justify">
+                                            Gọi lươn xào xả ớt với cá hú kho tộ, cá ko tươi, lươn hơi nặng mùi,
+                                            giá cao lại còn thêm 5% phí phục vụ trong khi nhân viên ko được
+                                            niềm nở.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <nav class="mt-3" aria-label="Page navigation">
+                                    <ul class="pagination justify-content-end">
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                                <i class="fas fa-angle-double-left"></i>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                                <i class="fas fa-angle-double-right"></i>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                            <!-- Point comment -->
+                            <div class="col-3 pl-0">
+                                <div class="review border justify-content-center">
+                                    <p class="border-bottom text-center mt-3"> <b>15</b> lượt đánh giá</p>
+                                    <p class="border-bottom text-center mt-3"><b>7.0 </b><small>điểm</small> - Trung
+                                        bình</p>
+                                    <div class="d-flex justify-content-center">
+                                        <button type="button" class="btn btn-info">
+                                            <i class="far fa-comment"></i> Bình luận
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="image" role="tabpanel" aria-labelledby="image-tab">
+                        <div class="row mt-3">
+                            <div class="col-md-4 col-lg-3">
+                                <div class="card mb-4 box-shadow">
+                                    <a href="#">
+                                        <img class="card-img-top" alt="Thumbnail [100%x210]" style="height: 210px; width: 100%; display: block;"
+                                            src="images/products/comnieu.jpg" data-holder-rendered="true">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-3">
+                                <div class="card mb-4 box-shadow">
+                                    <a href="#">
+                                        <img class="card-img-top" alt="Thumbnail [100%x210]" style="height: 210px; width: 100%; display: block;"
+                                            src="images/products/comnieu.jpg" data-holder-rendered="true">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-3">
+                                <div class="card mb-4 box-shadow">
+                                    <a href="#">
+                                        <img class="card-img-top" alt="Thumbnail [100%x210]" style="height: 210px; width: 100%; display: block;"
+                                            src="images/products/comnieu.jpg" data-holder-rendered="true">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-3">
+                                <div class="card mb-4 box-shadow">
+                                    <a href="#">
+                                        <img class="card-img-top" alt="Thumbnail [100%x210]" style="height: 210px; width: 100%; display: block;"
+                                            src="images/products/comnieu.jpg" data-holder-rendered="true">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-3">
+                                <div class="card mb-4 box-shadow">
+                                    <a href="#">
+                                        <img class="card-img-top" alt="Thumbnail [100%x210]" style="height: 210px; width: 100%; display: block;"
+                                            src="images/products/comnieu.jpg" data-holder-rendered="true">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-3">
+                                <div class="card mb-4 box-shadow">
+                                    <a href="#">
+                                        <img class="card-img-top" alt="Thumbnail [100%x210]" style="height: 210px; width: 100%; display: block;"
+                                            src="images/products/comnieu.jpg" data-holder-rendered="true">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-3">
+                                <div class="card mb-4 box-shadow">
+                                    <a href="#">
+                                        <img class="card-img-top" alt="Thumbnail [100%x210]" style="height: 210px; width: 100%; display: block;"
+                                            src="images/products/comnieu.jpg" data-holder-rendered="true">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-3">
+                                <div class="card mb-4 box-shadow">
+                                    <a href="#">
+                                        <img class="card-img-top" alt="Thumbnail [100%x210]" style="height: 210px; width: 100%; display: block;"
+                                            src="images/products/comnieu.jpg" data-holder-rendered="true">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane fade" id="video" role="tabpanel" aria-labelledby="video-tab">...</div>
+                    <div class="tab-pane fade" id="map" role="tabpanel" aria-labelledby="map-tab">...</div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- end Content -->
+
+    </div>
+
+    <!-- ************ end Main **************-->
+
+
+    <!-- Footer -->
+    <footer class="page-footer font-small blue-grey lighten-5 mt-5  ">
+
+        <div style="background-color: #33b889;">
+            <div class="container">
+
+                <!-- Grid row-->
+                <div class="row py-3 d-flex align-items-center">
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                        <h6 class="mb-0">Get connected with us on social networks!</h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+                        <!-- Facebook -->
+                        <a class="fb-ic">
+                            <i class="fab fa-facebook mr-4"></i>
+                        </a>
+                        <!-- Twitter -->
+                        <a class="tw-ic">
+                            <i class="fab fa-twitter mr-4"></i>
+                        </a>
+                        <!-- Google +-->
+                        <a class="gplus-ic">
+                            <i class="fab fa-google-plus-g mr-4"></i>
+                        </a>
+                        <!--Linkedin -->
+                        <a class="li-ic">
+                            <i class="fab fa-linkedin mr-4"></i>
+                        </a>
+                        <!--Instagram-->
+                        <a class="ins-ic">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row-->
+
+            </div>
+        </div>
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left mt-3">
+
+            <!-- Grid row -->
+            <div class="row dark-grey-text">
+
+                <!-- Grid column -->
+                <div class="col-4">
+
+                    <!-- Content -->
+                    <h6 class="text-uppercase font-weight-bold">Mục tiêu</h6>
+                    <hr class="teal accent-3 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p class="text-justify">Food & Taste được chúng tôi tạo ra nhằm cung cấp một địa chỉ online giúp
+                        mọi người
+                        tìm kiếm các
+                        địa điểm ăn uống ở TPHCM một cách nhanh chống.</p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-4 mx-auto">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Lĩnh vực tìm kiếm</h6>
+                    <hr class="teal accent-3 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a class="dark-grey-text" href="#!">Đồ ăn</a>
+                    </p>
+                    <p>
+                        <a class="dark-grey-text" href="#!">Đồ uống</a>
+                    </p>
+                    <p>
+                        <a class="dark-grey-text" href="#!">Bình luận </a>
+                    </p>
+                    <p>
+                        <a class="dark-grey-text" href="#!">Khuyến mãi</a>
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-4 mx-auto mb-md-0 ">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                    <hr class="teal accent-3 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <i class="fa fa-home mr-3"></i> VietNam, HCM City</p>
+                    <p>
+                        <i class="fa fa-envelope mr-3"></i> info@gmail.com</p>
+                    <p>
+                        <i class="fa fa-phone mr-3"></i> + 01 234 567 88</p>
+                    <p>
+                        <i class="fa fa-print mr-3"></i> + 01 234 567 89</p>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center text-black-50">© 2018 Copyright:
+            <a class="dark-grey-text" href="#"> Food-Taste.com</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- end Footer -->
+
+
+</body>
+
+</html>

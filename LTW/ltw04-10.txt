@@ -1,0 +1,11 @@
+- array co the index bang chuoi
+	vd: stuff["course"]
+- Dumping an array: - to debug
+	print_r(), var_dump()
+
+- Kieu khai bao echo <<< _END ( khai bao ma code )
+-method="get": trinh duyet collect data va gan len thanh URL
+ Su dung bien sieu toan cuc $_GET de thao tac du lieu
+- method="post": du lieu duoc bo vao /body cua goi tin
+ Su dung $_POST
+

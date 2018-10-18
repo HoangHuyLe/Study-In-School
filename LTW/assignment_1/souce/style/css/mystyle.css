@@ -1,0 +1,282 @@
+/* Define useable color class  */
+.bg-lightgrey{
+    background-color: #f1f0f0 !important; 
+}
+
+.bg-teal{
+    background-color: teal;
+}
+
+/* end define */
+
+.sologan {
+    margin: auto;
+}
+
+.sologan p{
+    font-style: italic;
+    font-family: Helvetica;
+    font-size: 25px;
+    padding: 0;    
+    text-align: center;
+}
+
+
+
+/* // Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) { 
+    .menu > li > .megadrop{
+        left: 140px;        
+    }
+    .navbar > .nav-item > .input-group{
+        max-width: 300px;
+    }
+
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {  
+    .menu > li > .megadrop{
+        left: 100px;        
+    }
+    .navbar > .nav-item > .input-group{
+        max-width: 250px;
+    }
+
+}
+@media (max-width: 769px){
+    .form-group .form-control { 
+        max-width:140px;
+    }
+    .col-1{
+        padding-right: 0px;
+    }
+    #inputGroupSelect02{
+        max-width: 85px;
+    }
+    .menu > li > .megadrop{
+        left: 112px;        
+    }
+}
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .sologan{
+        display: none;
+    }
+    .before-nav{
+        display: none;
+    }
+    .menu > li > .megadrop{
+        left: 95px;        
+    }
+
+    /* Side navigation */
+    .sidenav {        
+        width: 0;
+        position: sticky;
+        z-index: 10000;
+        top: 0;
+        left: 0;        
+        overflow-x: hidden;        
+        transition: 0.5s;        
+    }
+    .sidenav .closebtn {
+        /* position: absolute; */
+        top: 0px;        
+        font-size: 25px;
+        margin-left: 90px;
+        color: gray;
+    }
+    .menu{
+        max-width: 120px;
+    }
+    .menu > li > .megadrop{
+        left: 120px;        
+    }
+    .megadrop{
+        width: 120px;
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 10px;
+    }
+    .megadrop .column{
+        position: relative;
+        width: 100%;
+    }
+
+    .navbar-nav{
+        background-color: lightgray;
+    }
+    .navbar-nav .nav-item{
+        margin-top: 1px;
+    }
+    
+    /* .navbar > .nav-item > .input-group{
+        max-width: 220px;
+    }
+    #inputGroupSelect02{
+        max-width: 100px;
+    } */
+}
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    .sologan{
+        display: none;
+    }
+    .before-nav{
+        display: none;
+    }
+    .navbar {
+        padding:0;
+        width: 100%;       
+    }
+    .navbar-expand-md{
+        padding: 0;       
+        width: 100%;
+    }
+    .navbar > .nav-brand{
+        margin-right: 0px;
+    }
+    .navbar > .nav-item > .input-group{
+        max-width: 135px;
+    }
+    .col-11{
+        padding-right: 0px;
+    }
+    .col-1{
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-right: -10px;
+    }
+    .navbar-brand{
+        margin-right: 0px;
+    }
+    /* Side navigation */
+    .sidenav {        
+        width: 0;
+        position: sticky;
+        z-index: 10000;
+        top: 0;
+        left: 0;        
+        overflow-x: hidden;        
+        transition: 0.5s;        
+    }
+    .sidenav .closebtn {
+        /* position: absolute; */
+        top: 0px;        
+        font-size: 25px;
+        margin-left: 90px;
+        color: gray;
+    }
+    .menu{
+        max-width: 120px;
+    }
+    .menu > li > .megadrop{
+        left: 120px;        
+    }
+    .megadrop{
+        width: 120px;
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 10px;
+    }
+    .megadrop .column{
+        position: relative;
+        width: 100%;
+    }
+
+    .navbar-nav{
+        background-color: lightgray;
+    }
+    .navbar-nav .nav-item{
+        margin-top: 1px;
+    }
+ } 
+
+/*jssor slider loading skin spin css*/
+.jssorl-009-spin img {
+    animation-name: jssorl-009-spin;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+@keyframes jssorl-009-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/*jssor slider bullet skin 051 css*/
+.jssorb051 .i {position:absolute;cursor:pointer;}
+.jssorb051 .i .b {fill:#fff;fill-opacity:0.5;}
+.jssorb051 .i:hover .b {fill-opacity:.7;}
+.jssorb051 .iav .b {fill-opacity: 1;}
+.jssorb051 .i.idn {opacity:.3;}
+
+/*jssor slider arrow skin 051 css*/
+.jssora051 {display:block;position:absolute;cursor:pointer;}
+.jssora051 .a {fill:none;stroke:#fff;stroke-width:360;stroke-miterlimit:10;}
+.jssora051:hover {opacity:.8;}
+.jssora051.jssora051dn {opacity:.5;}
+.jssora051.jssora051ds {opacity:.3;pointer-events:none;}
+
+
+/* Button click to top page */
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 0px;
+    z-index: 99;
+    font-size: 10px;
+    border: none;
+    outline: none;
+    background-color: #28a745;
+    color: black;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 4px;
+}
+#myBtn:hover {
+    background-color: #555;
+}
+
+/* Change z-index for dropdown menu */
+.dropdown{
+    z-index: 10000;
+}
+
+.openSideBar{
+    width: 30px;
+    height: 38px;
+    background-color: lightgray;
+    /* margin-left: 2px; */
+    opacity: 0.7;
+}
+
+.openSideBar img{
+    margin-top: 2px;
+}
+
+.closeSideBar{
+    background-color: lightgray;
+    width: 120px;
+    height: 30px;
+}
+
+.point-label{
+    font-weight: 400;
+    color: #777;
+    font-size: 12px;
+    text-align: center;     
+}
+
+.point{
+    font-weight: 700;
+    font-size: 18px;
+    color: green;
+    text-align: center;
+}
+
+

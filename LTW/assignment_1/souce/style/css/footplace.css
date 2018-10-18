@@ -1,0 +1,122 @@
+/**
+ * Set width and change backgroung color
+ * 
+ */
+.topnavContent{
+    background-color: lightgrey;
+    width: 100%;
+}
+
+
+.topnavContent ul li a:hover {
+    color: red;    
+}
+
+.topnavContent li:hover{
+    border-bottom: solid 1px;
+    border-bottom-color: red;
+}
+
+/* Inital value for a li:active */
+.init-active{
+    border-bottom : solid 1px;
+    border-bottom-color: red;  
+    color: red;  
+}
+
+/* Style for badge top navigation content */
+.nav-badge{
+    color: lightslategray; font-size: 15px;
+}
+
+/* Style for riview */
+.review{
+    background-color: #fff;
+    width: 100%;
+    position: sticky;
+    top: 50px;
+}
+
+/* Style for small icon comment */
+.smallcmt{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #bbb;
+    margin-left: 5px;
+}
+
+
+
+/* ****** Media Query ******** */
+/* // Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) { 
+    .menu > li > .megadrop{
+        left: 140px;        
+    }
+    .navbar > .nav-item > .input-group{
+        max-width: 300px;
+    }
+
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+}
+@media (max-width: 769px){
+
+}
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+}
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    .review .btn{
+        padding: 0;
+        font-size: 12px;
+    }
+    .res-image img{
+        max-height: 200px;
+    }
+ }
+
+/* Hidden toggle icon */
+.topnavContent .icon{
+    display: none;
+
+}
+
+ /* Responsive for top nav content */
+ @media screen and (max-width: 600px) {
+    .topnavContent ul li:not(:first-child){
+      display: none;
+    }
+   
+    .topnavContent .icon {        
+      display: block;
+      position: absolute;    
+      text-decoration: none;      
+      right: 25px;  
+      margin-top: -38px;    
+    }
+    .topnavContent ul{
+        display: flex;
+        flex-direction: column !important;
+    }
+  }
+  
+@media screen and (max-width: 600px) {
+    .topnavContent.responsive {        
+        position: relative;       
+    }
+    .topnavContent.responsive .icon {
+      position: absolute;
+      right: 10px;
+      top: 40px;
+    }
+    .topnavContent.responsive ul li {
+      float: none;
+      display: flex;
+      text-align: left;
+    }    
+  }

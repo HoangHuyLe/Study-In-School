@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Javascript Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+
+    <script language="javascript" type="text/javascript">
+        var plus, minus, divide, times
+        function initialise() {
+            plus = document.calc.operator.options[0]
+            minus = document.calc.operator.options[1]
+            multiple = document.calc.operator.options[2]
+            devide = document.calc.operator.options[3]
+            pow = document.calc.operator.options[4]
+        }
+        function calculate() {
+            x = parseFloat(document.calc.val1.value)
+            y = parseFloat(document.calc.val2.value)
+            if (plus.selected) document.calc.answer.value = x + y
+            if (minus.selected) document.calc.answer.value = x - y
+            if (multiple.selected) document.calc.answer.value = x * y
+            if (devide.selected) document.calc.answer.value = x / y
+            if (pow.selected) document.calc.answer.value = Math.pow(x,y)
+        }
+    </script>
+</head>
+
+<body onload="initialise()">
+
+    <h2>Calculator</h2>
+    Enter a number(example 10) in field 1 then anothor number (example 20) in field 2 press answer.
+    <br>
+    This should give result 30
+    <br>
+    Change the operation from + to each of the others ( -, /, *, ^ ) in turn and press answer.
+    <br>
+    <form name="calc" action="post">
+        <input type="text" name="val1" size="10">
+
+        <select name="operator">
+            <option value="a">+
+            </option>
+            <option value="minus">-
+            </option>
+            <option value="multiple">*
+            </option>
+            <option value="divide">/
+            </option>
+            <option value="pow">^                 
+            </option>
+        </select>
+
+        <input type="text" name="val2" size="10">
+        =
+        <input type="text" name="answer" size="10">
+        <input type="button" value="answer" onclick="calculate()">
+    </form>
+
+
+</body>
+
+</html>

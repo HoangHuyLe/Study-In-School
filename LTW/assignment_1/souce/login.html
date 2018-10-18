@@ -1,0 +1,178 @@
+<!-- /**
+ * Login and register page
+ * 
+ * Author: Le Hoang Huy
+ * Last update: 17/10/2018
+ */ -->
+
+
+<!doctype html>
+<html>
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Food-Place</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome v5.4.1 -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+    <!-- Mystyle core CSS -->
+    <link rel="stylesheet" href="style/css/mystyle.css">
+    <link rel="stylesheet" href="style/css/login.css">
+
+    <script src="./libs/jquery/jquery-3.3.1.slim.min.js"></script>
+    <script src="./libs/popper/popper.min.js"></script>
+    <script src="libs/bootstrap/js/bootstrap.min.js"> </script>
+    <script src="style/js/mystyle.js"></script>
+    <script src="style/js/login.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+
+
+<body style="padding:0px; margin:0px;">
+
+    <!-- Header -->
+    <div id="header" class="container-fluid d-flex justify-content-center bg-lightgrey ">
+        <!-- Logo -->
+        <div class="logo text-center" name="sologan">
+            <a href="#"><img src="images/logo.png" alt="logo" height="80px" /></a>
+        </div>
+
+    </div>
+    <!-- end Header -->
+
+    <!-- Main -->
+    <div class="container mt-3">
+        <div class="row">
+            <ul class="nav nav-tabs mx-auto" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="register-tab" data-toggle="tab" href="#register" role="tab"
+                        aria-controls="register" aria-selected="true">Đăng ký</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login"
+                        aria-selected="false">Đăng nhập</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row">
+            <div class="tab-content mx-auto" id="myTabContent">
+
+                <!-- Tab Register -->
+                <div class="tab-pane fade show active" id="register" role="tabpanel" aria-labelledby="register-tab">
+                    <div class="col-lg-10 col-xl-9">
+                        <div class="card card-signin flex-row">
+                            <div class="card-img-left d-none d-md-flex">
+                                <!-- Background image for card set in CSS! -->
+                            </div>
+                            <div class="card-body">
+                                <form class="form-signin">
+                                    <div class="form-label-group">
+                                        <input type="text" id="inputUserame" class="form-control" placeholder="Username"
+                                            required autofocus>
+                                        <label for="inputUserame">Tên đăng nhập</label>
+                                    </div>
+
+                                    <div class="form-label-group">
+                                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address"
+                                            required>
+                                        <label for="inputEmail">Email</label>
+                                    </div>
+
+                                    <hr>
+
+                                    <div class="form-label-group">
+                                        <input type="password" id="inputPassword" class="form-control" placeholder="Password"
+                                            required>
+                                        <label for="inputPassword">Mật khẩu</label>
+                                    </div>
+
+                                    <div class="form-label-group">
+                                        <input type="password" id="inputConfirmPassword" class="form-control"
+                                            placeholder="Password" required>
+                                        <label for="inputConfirmPassword">Xác nhận mật khẩu</label>
+                                    </div>
+
+                                    <button class="btn btn-block text-uppercase" type="submit" form="nameform" value="submit-reg">Đăng
+                                        ký</button>
+
+                                    <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i
+                                            class="fab fa-google mr-2"></i>
+                                        Đăng nhập với Google</button>
+                                    <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i
+                                            class="fab fa-facebook-f mr-2"></i>
+                                        Đăng nhập với Facebook</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Login -->
+                <div class="tab-pane fade" id="login" role="tabpanel" aria-labelledby="login-tab">
+                    <div class="col-lg-10 col-xl-9">
+                        <div class="card card-signin flex-row">
+                            <div class="card-img-left d-none d-md-flex">
+                                <!-- Background image for card set in CSS! -->
+                            </div>
+                            <div class="card-body">
+                                <form class="form-signin">
+                                    <div class="form-label-group">
+                                        <input type="text" id="inputUserame1" class="form-control" placeholder="Username"
+                                            required autofocus>
+                                        <label for="inputUserame1">Tên đăng nhập</label>
+                                    </div>
+
+                                    <div class="form-label-group">
+                                        <input type="password" id="inputPassword1" class="form-control" placeholder="Password"
+                                            required>
+                                        <label for="inputPassword1">Mật khẩu</label>
+                                    </div>
+
+                                    <button class="btn btn-block text-uppercase" type="submit" form="nameform" value="submit-reg">Đăng
+                                        nhập</button>
+
+                                    <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i
+                                            class="fab fa-google mr-2"></i>
+                                        Đăng nhập với Google</button>
+                                    <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i
+                                            class="fab fa-facebook-f mr-2"></i>
+                                        Đăng nhập với Facebook</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ************ end Main **************-->
+
+
+    <!-- Footer -->
+    <footer class="page-footer font-small lighten-5 mt-5 ">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center text-black-50">© 2018 Copyright:
+            <a class="dark-grey-text" href="#"> Food-Taste.com</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- end Footer -->
+
+
+</body>
+
+</html>
